@@ -1,10 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using EasyIMGUI.Controls.Base;
+using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    internal class Horizontal
+    public class Horizontal : NestedControl
     {
+        public override void Draw()
+        {
+            GUILayout.BeginHorizontal();
+            base.Draw();
+            GUILayout.EndHorizontal();
+        }
     }
 }

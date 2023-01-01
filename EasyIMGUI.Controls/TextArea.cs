@@ -3,9 +3,8 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class TextArea : Control, IValue<string>
+    public class TextArea : TextControl
     {
-        public string Value { get; set; } = string.Empty;
         public override void Draw()
         {
             Value = GUILayout.TextArea(Value);

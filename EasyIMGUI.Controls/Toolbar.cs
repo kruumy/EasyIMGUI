@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Toolbar : SelectionControl, Control, IValue<int>, IContents
+    public class Toolbar : SelectionControl
     {
         public override void Draw()
         {

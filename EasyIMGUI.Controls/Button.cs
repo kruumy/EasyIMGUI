@@ -4,10 +4,8 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Button : Control, IContent, IValue<Action>
+    public class Button : ContentAndValueControl<Action>
     {
-        public Action Value { get; set; } = default;
-        public GUIContent Content { get; set; } = GUIContent.none;
         public override void Draw()
         {
             if (GUILayout.Button(Content))

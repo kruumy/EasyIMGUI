@@ -1,4 +1,6 @@
-﻿namespace EasyIMGUI.Controls.Base
+﻿using UnityEngine;
+
+namespace EasyIMGUI.Controls.Base
 {
     public interface IDimensions
     {

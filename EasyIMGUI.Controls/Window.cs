@@ -9,6 +9,7 @@ namespace EasyIMGUI.Controls
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
         public int ID { get; } = new System.Random().Next();
+
         public override void Draw()
         {
             Dimensions = GUILayout.Window(ID, Dimensions, (int id) =>
