@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Toggle : ContentAndValueControl<bool>
+    public class VerticalSlider : SliderControl
     {
         public override void Draw()
         {
-            Value = GUILayout.Toggle(Value, Content);
+            Value = GUILayout.VerticalSlider(Value, Minimum, Maximim);
         }
     }
 }

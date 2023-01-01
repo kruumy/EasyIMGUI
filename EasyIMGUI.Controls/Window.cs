@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Window : NestedControl, IContent
+    public class Window : NestedControl, IContent, IDimensions
     {
         public GUIContent Content { get; set; } = GUIContent.none;
         public bool IsDragable { get; set; } = true;

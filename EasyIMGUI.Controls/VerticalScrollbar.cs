@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Toggle : ContentAndValueControl<bool>
+    public class HorizontalScrollBar : ScrollbarControl
     {
         public override void Draw()
         {
-            Value = GUILayout.Toggle(Value, Content);
+            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximim);
         }
     }
 }

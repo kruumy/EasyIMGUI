@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Toggle : ContentAndValueControl<bool>
+    public class TextField : TextControl
     {
         public override void Draw()
         {
-            Value = GUILayout.Toggle(Value, Content);
+            Value = GUILayout.TextField(Value);
         }
     }
 }
