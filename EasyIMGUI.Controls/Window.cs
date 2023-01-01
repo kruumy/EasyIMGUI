@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using EasyIMGUI.Controls.Base;
+using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Window : NestedControl
+    public class Window : NestedControl, IContent
     {
-        public string Title { get; set; } = "Window";
+        public GUIContent Content { get; set; } = GUIContent.none;
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
         public int ID { get; } = new System.Random().Next();
@@ -18,7 +19,7 @@ namespace EasyIMGUI.Controls
                     GUI.DragWindow(new Rect(0, 0, Dimensions.width, 20));
                 }
             },
-            Title, LayoutOptions);
+            Content);
         }
     }
 }

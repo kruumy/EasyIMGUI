@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EasyIMGUI.Controls
+namespace EasyIMGUI.Controls.Base
 {
     public abstract class NestedControl : Control
     {

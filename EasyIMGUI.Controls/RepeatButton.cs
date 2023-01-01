@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Button : ValueAndContentControl<Action>
+    public class RepeatButton : ValueAndContentControl<Action>, IContent
     {
+        public GUIContent Content { get; set; } = GUIContent.none;
         public override void Draw()
         {
-            if (GUILayout.Button(Content))
+            if (GUILayout.RepeatButton(Content))
             {
                 Value.Invoke();
             }
