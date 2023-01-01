@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class TextField : TextControl
+    public class TextField : ValueControl<string>
     {
         public override void Draw()
         {
