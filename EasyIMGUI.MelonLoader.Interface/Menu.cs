@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace EasyIMGUI.MelonLoader.Interface
 {
-    public class Root
+    public class Menu
     {
         public List<Control> Controls { get; } = new List<Control>();
         public bool IsOpen { get; private set; } = false;
