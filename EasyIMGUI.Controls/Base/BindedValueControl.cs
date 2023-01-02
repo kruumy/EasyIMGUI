@@ -2,11 +2,11 @@
 
 namespace EasyIMGUI.Controls.Base
 {
-    public abstract class BindedValueControl<T> : Control, IValue<T>
+    public abstract class BindedValueControl<T> : Control
     {
         public Action<T> ValueSetter;
         public Func<T> ValueGetter;
-        T IValue<T>.Value
+        private T Value
         {
             get
             {

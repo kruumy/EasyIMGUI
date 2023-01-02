@@ -1,11 +1,9 @@
 ﻿using System;
-using UnityEngine;
 
 namespace EasyIMGUI.Controls.Base
 {
-    public abstract class ButtonControl : Control, IContent
+    public abstract class Button : Control
     {
-        public GUIContent Content { get; set; } = new GUIContent("");
         public event EventHandler OnButtonPressed;
         private protected void Invoke_OnButtonPressed()
         {

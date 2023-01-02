@@ -1,15 +1,19 @@
 ﻿using EasyIMGUI.Controls.Base;
+using EasyIMGUI.Controls.Interfaces;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class Window : NestedControl, IContent, IDimensions
+    public class Window : NestedControl, IDimensions, IContent, IStyle, ILayoutOptions
     {
         public GUIContent Content { get; set; } = new GUIContent("");
+        public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
+
+        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.window);
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
-        public int ID { get; } = new System.Random().Next();
-
+        public int ID { get; set; } = new System.Random().Next();
         public override void Draw()
         {
             Dimensions = GUILayout.Window(ID, Dimensions, (int id) =>
@@ -20,7 +24,7 @@ namespace EasyIMGUI.Controls
                     GUI.DragWindow(new Rect(0, 0, Dimensions.width, 20));
                 }
             },
-            Content);
+            Content, Style, LayoutOptions.ToArray());
         }
     }
 }
