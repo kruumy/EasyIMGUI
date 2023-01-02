@@ -7,7 +7,7 @@ namespace EasyIMGUI.Controls
     {
         public override void Draw()
         {
-            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximim);
+            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum);
         }
     }
 }

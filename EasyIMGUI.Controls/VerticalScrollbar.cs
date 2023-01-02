@@ -7,7 +7,7 @@ namespace EasyIMGUI.Controls
     {
         public override void Draw()
         {
-            Value = GUILayout.VerticalScrollbar(Value, Size, Minimum, Maximim);
+            Value = GUILayout.VerticalScrollbar(Value, Size, Minimum, Maximum);
         }
     }
 }

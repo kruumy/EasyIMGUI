@@ -2,7 +2,7 @@
 
 namespace EasyIMGUI.Controls.Base
 {
-    public abstract class ValueControl<T> : Control
+    public abstract class ValueControl<T> : Control, IValue<T>
     {
         private T _Value = default;
         public T Value
