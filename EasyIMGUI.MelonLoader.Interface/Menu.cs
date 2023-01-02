@@ -22,7 +22,7 @@ namespace EasyIMGUI.MelonLoader.Interface
         /// </summary>
         public void Open()
         {
-            if (IsOpen)
+            if (!IsOpen)
             {
                 MelonEvents.OnGUI.Subscribe(Draw);
                 IsOpen = true;
@@ -37,7 +37,7 @@ namespace EasyIMGUI.MelonLoader.Interface
         /// </summary>
         public void Close()
         {
-            if (!IsOpen)
+            if (IsOpen)
             {
                 MelonEvents.OnGUI.Unsubscribe(Draw);
                 IsOpen = false;
