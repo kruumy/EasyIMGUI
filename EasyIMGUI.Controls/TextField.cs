@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class TextField : TextBlock, IStyle, ILayoutOptions
+    public class TextField : TextElement, IStyle, ILayoutOptions
     {
         public GUIStyle Style { get; set; } // TODO
 
