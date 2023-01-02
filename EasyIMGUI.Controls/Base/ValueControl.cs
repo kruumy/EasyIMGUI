@@ -13,7 +13,7 @@ namespace EasyIMGUI.Controls.Base
             }
             set
             {
-                if (!_Value.Equals(value))
+                if (_Value == null || !_Value.Equals(value))
                 {
                     _Value = value;
                     OnValueChanged?.Invoke(this, value);

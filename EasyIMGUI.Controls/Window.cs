@@ -5,7 +5,7 @@ namespace EasyIMGUI.Controls
 {
     public class Window : NestedControl, IContent, IDimensions
     {
-        public GUIContent Content { get; set; } = GUIContent.none;
+        public GUIContent Content { get; set; } = new GUIContent("");
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
         public int ID { get; } = new System.Random().Next();
