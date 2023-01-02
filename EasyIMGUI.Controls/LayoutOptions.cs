@@ -7,16 +7,16 @@ namespace EasyIMGUI.Controls
     /// <summary>
     /// A wrapper for GUILayoutOptions that makes it more intuitive to interact with.
     /// </summary>
-    public struct LayoutOptions
+    public sealed class LayoutOptions
     {
-        public bool? ExpandHeight { private get; set; }
-        public bool? ExpandWidth { private get; set; }
-        public float? Height { private get; set; }
-        public float? Width { private get; set; }
-        public float? MaxWidth { private get; set; }
-        public float? MinWidth { private get; set; }
-        public float? MinHeight { private get; set; }
-        public float? MaxHeight { private get; set; }
+        public bool? ExpandHeight { private get; set; } = null;
+        public bool? ExpandWidth { private get; set; } = null;
+        public float? Height { private get; set; } = null;
+        public float? Width { private get; set; } = null;
+        public float? MaxWidth { private get; set; } = null;
+        public float? MinWidth { private get; set; } = null;
+        public float? MinHeight { private get; set; } = null;
+        public float? MaxHeight { private get; set; } = null;
 
         public static implicit operator GUILayoutOption[](LayoutOptions lo)
         {
