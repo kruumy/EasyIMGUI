@@ -14,7 +14,7 @@ namespace EasyIMGUI.Controls.Base
             }
             set
             {
-                ValueSetter?.Invoke(value);
+                ValueSetter.Invoke(value);
             }
         }
     }
