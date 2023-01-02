@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
+    /// <summary>
+    /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Box(GUIContent, GUIStyle, GUILayoutOption[])"/>.
+    /// </summary>
     public class Box : Control, IContent, IStyle, ILayoutOptions
     {
         public GUIContent Content { get; set; } = new GUIContent("");

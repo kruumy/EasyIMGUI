@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
+    /// <summary>
+    /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Button(string, GUIStyle, GUILayoutOption[])"/>.
+    /// </summary>
     public class SingleButton : Button, IStyle, ILayoutOptions, IContent
     {
         public GUIContent Content { get; set; } = new GUIContent("");

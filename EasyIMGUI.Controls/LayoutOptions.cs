@@ -20,7 +20,7 @@ namespace EasyIMGUI.Controls
 
         public static implicit operator GUILayoutOption[](LayoutOptions lo)
         {
-            List<GUILayoutOption> result = new List<GUILayoutOption>();
+            List<GUILayoutOption> result = new List<GUILayoutOption>(8);
             if (lo.ExpandHeight != null) result.Add(GUILayout.ExpandHeight((bool)lo.ExpandHeight));
             if (lo.ExpandWidth != null) result.Add(GUILayout.ExpandWidth((bool)lo.ExpandWidth));
             if (lo.Height != null) result.Add(GUILayout.Height((float)lo.Height));

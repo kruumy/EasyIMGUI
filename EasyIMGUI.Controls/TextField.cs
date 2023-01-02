@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
+    /// <summary>
+    /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.TextField(string, int, GUIStyle, GUILayoutOption[])"/>.
+    /// </summary>
     public class TextField : TextElement, IStyle, ILayoutOptions
     {
         public GUIStyle Style { get; set; } // TODO

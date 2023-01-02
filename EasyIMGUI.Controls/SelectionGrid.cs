@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
+    /// <summary>
+    /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.SelectionGrid(int, GUIContent[], int, GUIStyle, GUILayoutOption[])"/>.
+    /// </summary>
     public class SelectionGrid : ValueControl<int>, IContents, ILayoutOptions, IStyle
     {
         public List<GUIContent> Contents { get; set; } = new List<GUIContent>();
