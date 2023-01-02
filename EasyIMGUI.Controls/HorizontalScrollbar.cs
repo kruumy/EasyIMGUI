@@ -9,11 +9,11 @@ namespace EasyIMGUI.Controls
     {
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.horizontalScrollbar);
+        public GUIStyle Style { get; set; } // TODO
 
         public override void Draw()
         {
-            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum, Style, LayoutOptions.ToArray());
+            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum, LayoutOptions.ToArray());
         }
     }
 }

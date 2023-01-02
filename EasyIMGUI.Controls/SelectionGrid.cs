@@ -12,11 +12,11 @@ namespace EasyIMGUI.Controls
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.button);
+        public GUIStyle Style { get; set; } // TODO
 
         public override void Draw()
         {
-            Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, Style, LayoutOptions.ToArray());
+            Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions.ToArray());
         }
     }
 }

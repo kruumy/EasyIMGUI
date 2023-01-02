@@ -7,15 +7,15 @@ namespace EasyIMGUI.Controls
 {
     public class HorizontalSlider : Slider, IStyleSlider, ILayoutOptions
     {
-        public GUIStyle SliderStyle { get; set; } = new GUIStyle(GUI.skin.horizontalSlider);
+        public GUIStyle SliderStyle { get; set; } // TODO
 
-        public GUIStyle ThumbStyle { get; set; } = new GUIStyle(GUI.skin.horizontalSliderThumb);
+        public GUIStyle ThumbStyle { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
         public override void Draw()
         {
-            Value = GUILayout.HorizontalSlider(Value, Minimum, Maximum, SliderStyle, ThumbStyle, LayoutOptions.ToArray());
+            Value = GUILayout.HorizontalSlider(Value, Minimum, Maximum, LayoutOptions.ToArray());
         }
     }
 }

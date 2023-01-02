@@ -7,14 +7,14 @@ namespace EasyIMGUI.Controls
 {
     public class VerticalSlider : Slider, IStyleSlider, ILayoutOptions
     {
-        public GUIStyle SliderStyle { get; set; } = new GUIStyle(GUI.skin.verticalSlider);
+        public GUIStyle SliderStyle { get; set; } // TODO
 
-        public GUIStyle ThumbStyle { get; set; } = new GUIStyle(GUI.skin.verticalSliderThumb);
+        public GUIStyle ThumbStyle { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
         public override void Draw()
         {
-            Value = GUILayout.VerticalSlider(Value, Minimum, Maximum, SliderStyle, ThumbStyle, LayoutOptions.ToArray());
+            Value = GUILayout.VerticalSlider(Value, Minimum, Maximum, LayoutOptions.ToArray());
         }
     }
 }

@@ -9,13 +9,13 @@ namespace EasyIMGUI.Controls
     {
         public GUIContent Content { get; set; } = new GUIContent("");
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.label);
+        public GUIStyle Style { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
         public override void Draw()
         {
-            GUILayout.Label(Content, Style, LayoutOptions.ToArray());
+            GUILayout.Label(Content, LayoutOptions.ToArray());
         }
     }
 }

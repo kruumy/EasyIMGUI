@@ -10,7 +10,7 @@ namespace EasyIMGUI.Controls
         public GUIContent Content { get; set; } = new GUIContent("");
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.window);
+        public GUIStyle Style { get; set; } // TODO
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
         public int ID { get; set; } = new System.Random().Next();
@@ -24,7 +24,7 @@ namespace EasyIMGUI.Controls
                     GUI.DragWindow(new Rect(0, 0, Dimensions.width, 20));
                 }
             },
-            Content, Style, LayoutOptions.ToArray());
+            Content, LayoutOptions.ToArray());
         }
     }
 }

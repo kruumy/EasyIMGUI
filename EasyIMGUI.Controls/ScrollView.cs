@@ -9,13 +9,13 @@ namespace EasyIMGUI.Controls
     {
         public Vector2 Position { get; set; } = Vector2.zero;
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.scrollView);
+        public GUIStyle Style { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
         public override void Draw()
         {
-            GUILayout.BeginScrollView(Position, Style, LayoutOptions.ToArray());
+            GUILayout.BeginScrollView(Position, LayoutOptions.ToArray());
             base.Draw();
             GUILayout.EndScrollView();
         }

@@ -9,12 +9,12 @@ namespace EasyIMGUI.Controls
     {
         public List<GUIContent> Contents { get; set; } = new List<GUIContent>();
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.button);
+        public GUIStyle Style { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
         public override void Draw()
         {
-            Value = GUILayout.Toolbar(Value, Contents.ToArray(), Style, LayoutOptions.ToArray());
+            Value = GUILayout.Toolbar(Value, Contents.ToArray(), LayoutOptions.ToArray());
         }
     }
 }

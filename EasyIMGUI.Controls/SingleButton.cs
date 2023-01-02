@@ -9,13 +9,13 @@ namespace EasyIMGUI.Controls
     {
         public GUIContent Content { get; set; } = new GUIContent("");
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.button);
+        public GUIStyle Style { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
         public override void Draw()
         {
-            if (GUILayout.Button(Content, Style, LayoutOptions.ToArray()))
+            if (GUILayout.Button(Content, LayoutOptions.ToArray()))
             {
                 Invoke_OnButtonPressed();
             }

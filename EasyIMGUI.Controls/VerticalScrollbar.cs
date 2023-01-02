@@ -9,10 +9,10 @@ namespace EasyIMGUI.Controls
     {
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
 
-        public GUIStyle Style { get; set; } = new GUIStyle(GUI.skin.verticalScrollbar);
+        public GUIStyle Style { get; set; } // TODO
         public override void Draw()
         {
-            Value = GUILayout.VerticalScrollbar(Value, Size, Minimum, Maximum, Style, LayoutOptions.ToArray());
+            Value = GUILayout.VerticalScrollbar(Value, Size, Minimum, Maximum, LayoutOptions.ToArray());
         }
     }
 }
