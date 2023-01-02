@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
+    /// <summary>
+    /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Toolbar(int, GUIContent[], GUIStyle, GUI.ToolbarButtonSize, GUILayoutOption[])"/>.
+    /// </summary>
     public class Toolbar : ValueControl<int>, IContents, IStyle, ILayoutOptions
     {
         public List<GUIContent> Contents { get; set; } = new List<GUIContent>();
