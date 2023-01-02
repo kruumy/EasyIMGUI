@@ -5,6 +5,7 @@ namespace EasyIMGUI.Controls.Base
     public abstract class ValueControl<T> : Control
     {
         private T _Value = default;
+
         public T Value
         {
             get
@@ -22,16 +23,19 @@ namespace EasyIMGUI.Controls.Base
                 }
             }
         }
+
         public event EventHandler<T> OnValueChanged;
 
         public bool IsValueBinded => BindingValueSetter != null && BindingValueGetter != null;
         private Func<T> BindingValueGetter;
         private Action<T> BindingValueSetter;
+
         public void Bind(Func<T> getter, Action<T> setter)
         {
             BindingValueGetter = getter;
             BindingValueSetter = setter;
         }
+
         public void Unbind()
         {
             BindingValueGetter = null;

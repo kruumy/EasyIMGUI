@@ -12,6 +12,7 @@ namespace EasyIMGUI.Controls
         public GUIStyle ThumbStyle { get; set; } // TODO
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
+
         public override void Draw()
         {
             Value = GUILayout.VerticalSlider(Value, Minimum, Maximum, LayoutOptions.ToArray());

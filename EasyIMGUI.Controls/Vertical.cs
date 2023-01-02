@@ -12,6 +12,7 @@ namespace EasyIMGUI.Controls
         public GUIStyle Style { get; set; } = new GUIStyle(GUIStyle.none);
 
         public GUIContent Content { get; set; } = new GUIContent("");
+
         public override void Draw()
         {
             GUILayout.BeginVertical(Content, Style, LayoutOptions.ToArray());

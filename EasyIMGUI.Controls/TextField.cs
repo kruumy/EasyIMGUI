@@ -11,6 +11,7 @@ namespace EasyIMGUI.Controls
 
         public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
         public int MaxLength { get; set; } = int.MaxValue;
+
         public override void Draw()
         {
             Value = GUILayout.TextField(Value, MaxLength, LayoutOptions.ToArray());
