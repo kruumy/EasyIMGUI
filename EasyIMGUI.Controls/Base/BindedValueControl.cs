@@ -6,7 +6,7 @@ namespace EasyIMGUI.Controls.Base
     {
         public Action<T> ValueSetter;
         public Func<T> ValueGetter;
-        private T Value
+        private protected T Value
         {
             get
             {
