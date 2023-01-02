@@ -10,13 +10,13 @@ namespace EasyIMGUI.Controls
         public List<GUIContent> Contents { get; set; } = new List<GUIContent>();
         public int Width { get; set; } = 2;
 
-        public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public GUIStyle Style { get; set; } // TODO
 
         public override void Draw()
         {
-            Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions.ToArray());
+            Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions);
         }
     }
 }

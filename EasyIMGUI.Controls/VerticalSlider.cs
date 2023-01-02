@@ -1,6 +1,5 @@
 ﻿using EasyIMGUI.Controls.Base;
 using EasyIMGUI.Controls.Interfaces;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls
@@ -11,11 +10,11 @@ namespace EasyIMGUI.Controls
 
         public GUIStyle ThumbStyle { get; set; } // TODO
 
-        public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            Value = GUILayout.VerticalSlider(Value, Minimum, Maximum, LayoutOptions.ToArray());
+            Value = GUILayout.VerticalSlider(Value, Minimum, Maximum, LayoutOptions);
         }
     }
 }

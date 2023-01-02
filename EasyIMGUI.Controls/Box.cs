@@ -1,8 +1,5 @@
 ﻿using EasyIMGUI.Controls.Base;
 using EasyIMGUI.Controls.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls
@@ -13,11 +10,11 @@ namespace EasyIMGUI.Controls
 
         public GUIStyle Style { get; set; } // TODO
 
-        public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            GUILayout.Box(Content, LayoutOptions.ToArray());
+            GUILayout.Box(Content, LayoutOptions);
         }
     }
 }

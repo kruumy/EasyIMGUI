@@ -1,20 +1,17 @@
 ﻿using EasyIMGUI.Controls.Base;
 using EasyIMGUI.Controls.Interfaces;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls
 {
-    public class TextArea : ValueControl<string>, IStyle, ILayoutOptions
+    public class TextArea : TextBlock, IStyle, ILayoutOptions
     {
         public GUIStyle Style { get; set; } // TODO
 
-        public List<GUILayoutOption> LayoutOptions { get; set; } = new List<GUILayoutOption>();
-        public int MaxLength { get; set; } = int.MaxValue;
-
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
         public override void Draw()
         {
-            Value = GUILayout.TextArea(Value, MaxLength, LayoutOptions.ToArray());
+            Value = GUILayout.TextArea(Value, MaxLength, LayoutOptions);
         }
     }
 }
