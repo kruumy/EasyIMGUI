@@ -17,8 +17,8 @@ namespace EasyIMGUI.Controls
 
         public override void Draw()
         {
-            if (Style != null) GUILayout.BeginArea(Dimensions, Content);
-            else GUILayout.BeginArea(Dimensions, Content, Style);
+            if (Style != null) GUILayout.BeginArea(Dimensions, Content, Style);
+            else GUILayout.BeginArea(Dimensions, Content);
             base.Draw();
             GUILayout.EndArea();
         }
