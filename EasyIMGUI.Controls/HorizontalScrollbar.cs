@@ -11,11 +11,12 @@ namespace EasyIMGUI.Controls
     {
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public override void Draw()
         {
-            Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum, LayoutOptions);
+            if (Style != null) Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum, Style, LayoutOptions);
+            else Value = GUILayout.HorizontalScrollbar(Value, Size, Minimum, Maximum, LayoutOptions);
         }
     }
 }

@@ -11,13 +11,14 @@ namespace EasyIMGUI.Controls
     {
         public Vector2 Position { get; set; } = Vector2.zero;
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            GUILayout.BeginScrollView(Position, LayoutOptions);
+            if (Style != null) GUILayout.BeginScrollView(Position, Style, LayoutOptions);
+            else GUILayout.BeginScrollView(Position, LayoutOptions);
             base.Draw();
             GUILayout.EndScrollView();
         }

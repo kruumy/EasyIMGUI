@@ -9,12 +9,13 @@ namespace EasyIMGUI.Controls
     /// </summary>
     public class TextArea : TextElement, IStyle, ILayoutOptions
     {
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
         public override void Draw()
         {
-            Value = GUILayout.TextArea(Value, MaxLength, LayoutOptions);
+            if (Style != null) Value = GUILayout.TextArea(Value, MaxLength, Style, LayoutOptions);
+            else Value = GUILayout.TextArea(Value, MaxLength, LayoutOptions);
         }
     }
 }

@@ -9,13 +9,14 @@ namespace EasyIMGUI.Controls
     /// </summary>
     public class TextField : TextElement, IStyle, ILayoutOptions
     {
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            Value = GUILayout.TextField(Value, MaxLength, LayoutOptions);
+            if (Style != null) Value = GUILayout.TextField(Value, MaxLength, Style, LayoutOptions);
+            else Value = GUILayout.TextField(Value, MaxLength, LayoutOptions);
         }
     }
 }

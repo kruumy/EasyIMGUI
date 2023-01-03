@@ -9,14 +9,15 @@ namespace EasyIMGUI.Controls
     /// </summary>
     public class PasswordField : TextElement, IStyle, ILayoutOptions
     {
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
         public char MaskCharacter { get; set; } = '*';
 
         public override void Draw()
         {
-            Value = GUILayout.PasswordField(Value, MaskCharacter, MaxLength, LayoutOptions);
+            if (Style != null) Value = GUILayout.PasswordField(Value, MaskCharacter, MaxLength, Style, LayoutOptions);
+            else Value = GUILayout.PasswordField(Value, MaskCharacter, MaxLength, LayoutOptions);
         }
     }
 }

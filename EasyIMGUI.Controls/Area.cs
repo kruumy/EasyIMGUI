@@ -13,11 +13,12 @@ namespace EasyIMGUI.Controls
 
         public GUIContent Content { get; set; } = new GUIContent("");
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public override void Draw()
         {
-            GUILayout.BeginArea(Dimensions, Content);
+            if (Style != null) GUILayout.BeginArea(Dimensions, Content);
+            else GUILayout.BeginArea(Dimensions, Content, Style);
             base.Draw();
             GUILayout.EndArea();
         }

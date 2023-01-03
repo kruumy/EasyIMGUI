@@ -11,16 +11,16 @@ namespace EasyIMGUI.Controls
     {
         public GUIContent Content { get; set; } = new GUIContent("");
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            if (GUILayout.Button(Content, LayoutOptions))
-            {
-                Invoke_OnButtonPressed();
-            }
+            bool isClicked;
+            if (Style != null) isClicked = GUILayout.Button(Content, Style, LayoutOptions);
+            else isClicked = GUILayout.Button(Content, LayoutOptions);
+            if (isClicked) Invoke_OnButtonPressed();
         }
     }
 }

@@ -15,11 +15,12 @@ namespace EasyIMGUI.Controls
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public override void Draw()
         {
-            Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions);
+            if (Style != null) Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, Style, LayoutOptions);
+            else Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions);
         }
     }
 }

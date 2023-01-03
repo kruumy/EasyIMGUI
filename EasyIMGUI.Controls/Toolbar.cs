@@ -12,13 +12,14 @@ namespace EasyIMGUI.Controls
     {
         public List<GUIContent> Contents { get; set; } = new List<GUIContent>();
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            Value = GUILayout.Toolbar(Value, Contents.ToArray(), LayoutOptions);
+            if (Style != null) Value = GUILayout.Toolbar(Value, Contents.ToArray(), Style, LayoutOptions);
+            else Value = GUILayout.Toolbar(Value, Contents.ToArray(), LayoutOptions);
         }
     }
 }

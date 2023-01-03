@@ -11,16 +11,16 @@ namespace EasyIMGUI.Controls
     {
         public GUIContent Content { get; set; } = new GUIContent("");
 
-        public GUIStyle Style { get; set; } // TODO
+        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            if (GUILayout.RepeatButton(Content, LayoutOptions))
-            {
-                Invoke_OnButtonPressed();
-            }
+            bool isClicking;
+            if (Style != null) isClicking = GUILayout.RepeatButton(Content, Style, LayoutOptions);
+            else isClicking = GUILayout.RepeatButton(Content, LayoutOptions);
+            if (isClicking) Invoke_OnButtonPressed();
         }
     }
 }
