@@ -7,18 +7,15 @@ namespace EasyIMGUI.Controls
     /// <summary>
     /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Box(GUIContent, GUIStyle, GUILayoutOption[])"/>.
     /// </summary>
-    public class Box : Control, IContent, IStyle, ILayoutOptions
+    public class Box : Control, IContent, ILayoutOptions
     {
         public GUIContent Content { get; set; } = new GUIContent("");
-
-        public GUIStyle Style { get; set; } = null;
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         public override void Draw()
         {
-            if (Style != null) GUILayout.Box(Content, Style, LayoutOptions);
-            else GUILayout.Box(Content, LayoutOptions);
+            GUILayout.Box(Content, LayoutOptions);
         }
     }
 }

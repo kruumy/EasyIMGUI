@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls.Extra
 {
-    public class EasyToolbar : Selector, IStyle, ILayoutOptions
+    public class EasyToolbar : Selector, ILayoutOptions
     {
         public GUIStyle Style { get; set; } = null;
 
@@ -12,8 +12,7 @@ namespace EasyIMGUI.Controls.Extra
 
         public override void Draw()
         {
-            if (Style != null) Value = GUILayout.Toolbar(Value, Items.Contents, Style, LayoutOptions);
-            else Value = GUILayout.Toolbar(Value, Items.Contents, LayoutOptions);
+            Value = GUILayout.Toolbar(Value, Items.Contents, LayoutOptions);
             base.Draw();
         }
     }
