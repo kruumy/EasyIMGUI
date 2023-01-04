@@ -9,11 +9,11 @@ namespace EasyIMGUI.Controls.Automatic
     public class Vertical : NestedControl, ILayoutOptions, IContent
     {
         /// <inheritdoc/>
-        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+        public GUIContent Content { get; set; } = new GUIContent("");
 
         /// <inheritdoc/>
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
-        public GUIContent Content { get; set; } = new GUIContent("");
         /// <inheritdoc/>
 
         public override void Draw()

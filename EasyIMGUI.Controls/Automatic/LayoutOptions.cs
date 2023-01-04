@@ -12,11 +12,11 @@ namespace EasyIMGUI.Controls.Automatic
         public bool? ExpandHeight { private get; set; } = null;
         public bool? ExpandWidth { private get; set; } = null;
         public float? Height { private get; set; } = null;
-        public float? Width { private get; set; } = null;
-        public float? MaxWidth { private get; set; } = null;
-        public float? MinWidth { private get; set; } = null;
-        public float? MinHeight { private get; set; } = null;
         public float? MaxHeight { private get; set; } = null;
+        public float? MaxWidth { private get; set; } = null;
+        public float? MinHeight { private get; set; } = null;
+        public float? MinWidth { private get; set; } = null;
+        public float? Width { private get; set; } = null;
 
         public static implicit operator GUILayoutOption[](LayoutOptions lo)
         {

@@ -9,11 +9,12 @@ namespace EasyIMGUI.Controls.Automatic
     public class Area : NestedControl, IDimensions, IContent
     {
         /// <inheritdoc/>
+        public GUIContent Content { get; set; } = new GUIContent("");
+
+        /// <inheritdoc/>
         public Rect Dimensions { get; set; } = new Rect(Screen.width / 2, Screen.height / 2, 300, 300);
 
         /// <inheritdoc/>
-
-        public GUIContent Content { get; set; } = new GUIContent("");
         /// <inheritdoc/>
 
         public override void Draw()

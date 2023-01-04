@@ -9,10 +9,10 @@ namespace EasyIMGUI.Controls.Automatic
     public class Horizontal : NestedControl, ILayoutOptions, IContent
     {
         /// <inheritdoc/>
-        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+        public GUIContent Content { get; set; } = new GUIContent("");
 
         /// <inheritdoc/>
-        public GUIContent Content { get; set; } = new GUIContent("");
+        public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         /// <inheritdoc/>
 
