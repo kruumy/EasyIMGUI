@@ -10,6 +10,7 @@ namespace EasyIMGUI.Controls.Fixed
         public ScaleMode ScaleMode { get; set; } = ScaleMode.StretchToFill;
         public bool AlphaBlend { get; set; } = false;
         public float ImageAspect { get; set; } = 0f;
+
         public override void Draw()
         {
             GUI.DrawTexture(Dimensions, Image, ScaleMode, AlphaBlend, ImageAspect);

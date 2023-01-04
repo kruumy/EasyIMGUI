@@ -6,6 +6,7 @@ namespace EasyIMGUI.Controls.Fixed
     public class ScrollView : Shared.ScrollView, IDimensions
     {
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);
+
         public override void Draw()
         {
             // TODO: check this

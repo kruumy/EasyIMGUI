@@ -8,8 +8,10 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class RepeatButton : Shared.Button, ILayoutOptions
     {
+        /// <inheritdoc/>
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+        /// <inheritdoc/>
 
         public override void Draw()
         {

@@ -6,6 +6,7 @@ namespace EasyIMGUI.Controls.Fixed
     public class RepeatButton : Shared.Button, IDimensions
     {
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);
+
         public override void Draw()
         {
             if (GUI.RepeatButton(Dimensions, Content))

@@ -8,6 +8,7 @@ namespace EasyIMGUI.Controls.Fixed
         public Rect Dimensions { get; set; } = new Rect(10, 10, 300, 300);
 
         public GUIContent Content { get; set; } = new GUIContent("");
+
         public override void Draw()
         {
             GUI.BeginGroup(Dimensions, Content);

@@ -8,6 +8,7 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class Space : ValueControl<float>
     {
+        /// <inheritdoc/>
         public override void Draw()
         {
             GUILayout.Space(Value);

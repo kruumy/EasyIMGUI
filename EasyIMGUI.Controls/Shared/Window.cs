@@ -8,7 +8,8 @@ namespace EasyIMGUI.Controls.Shared
         public bool IsDragable { get; set; } = true;
         public Rect Dimensions { get; set; } = new Rect(0, 0, 300, 300);
         public int ID { get; set; } = new System.Random().Next();
-        private protected void WindowFunction(int windowID)
+
+        protected void WindowFunction(int windowID)
         {
             base.Draw();
             if (IsDragable)

@@ -8,7 +8,10 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class Label : Shared.Label, ILayoutOptions
     {
+        /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+
+        /// <inheritdoc/>
 
         public override void Draw()
         {

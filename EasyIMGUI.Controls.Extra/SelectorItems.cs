@@ -18,6 +18,7 @@ namespace EasyIMGUI.Controls.Extra
                 return result;
             }
         }
+
         public GUIContent[] Contents
         {
             get
@@ -30,6 +31,5 @@ namespace EasyIMGUI.Controls.Extra
                 return result;
             }
         }
-
     }
 }

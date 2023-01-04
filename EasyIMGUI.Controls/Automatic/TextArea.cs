@@ -8,8 +8,11 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class TextArea : Shared.TextControl, ILayoutOptions
     {
+        /// <inheritdoc/>
 
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+
+        /// <inheritdoc/>
         public override void Draw()
         {
             Value = GUILayout.TextArea(Value, MaxLength, LayoutOptions);

@@ -8,6 +8,7 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class FlexibleSpace : Control
     {
+        /// <inheritdoc/>
         public override void Draw()
         {
             GUILayout.FlexibleSpace();

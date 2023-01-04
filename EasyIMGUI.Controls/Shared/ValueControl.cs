@@ -9,39 +9,44 @@ namespace EasyIMGUI.Controls.Shared
     public abstract class ValueControl<T> : Control
     {
         private T _Value = default;
+
         /// <summary>
         /// The value of a <see cref="ValueControl{T}"/>.
         /// Represents different property of a <see cref="Control"/> depending on the inheriter.
         /// </summary>
         public T Value
         {
-            get
-            {
-                if (IsValueBinded) return BindingValueGetter.Invoke();
-                return _Value;
-            }
+            get => IsValueBinded ? BindingValueGetter.Invoke() : _Value;
             set
             {
                 if (_Value == null || !_Value.Equals(value))
                 {
-                    if (IsValueBinded) BindingValueSetter.Invoke(value);
+                    if (IsValueBinded)
+                    {
+                        BindingValueSetter.Invoke(value);
+                    }
+
                     _Value = value;
                     OnValueChanged?.Invoke(this, value);
                 }
             }
         }
+
         /// <summary>
         /// Is invoked everytime <see cref="Value"/> has been changed.
         /// The value it has been changed to is passed through the event args.
         /// <see cref="OnValueChanged"/> is still invoked even if the <see cref="Value"/> has been bounded.
         /// </summary>
         public event EventHandler<T> OnValueChanged;
+
         /// <summary>
         /// Determines if <see cref="Value"/> has been bounded to a Getter and Setter.
         /// </summary>
         public bool IsValueBinded => BindingValueSetter != null && BindingValueGetter != null;
+
         private Func<T> BindingValueGetter;
         private Action<T> BindingValueSetter;
+
         /// <summary>
         /// Is used to bind a property or field to the <see cref="Value"/>.
         /// </summary>
@@ -60,6 +65,7 @@ namespace EasyIMGUI.Controls.Shared
             BindingValueGetter = getter;
             BindingValueSetter = setter;
         }
+
         /// <summary>
         /// Unbinds any property or field from <see cref="Value"/> if there was any.
         /// </summary>

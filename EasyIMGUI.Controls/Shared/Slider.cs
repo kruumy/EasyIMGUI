@@ -9,6 +9,7 @@
         /// The minimum value of the <see cref="Slider"/>.
         /// </summary>
         public float Minimum { get; set; } = 0;
+
         /// <summary>
         /// The maximum value of the <see cref="Slider"/>.
         /// </summary>

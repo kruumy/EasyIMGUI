@@ -8,6 +8,5 @@ namespace EasyIMGUI.Controls.Fixed
         {
             Dimensions = GUI.Window(ID, Dimensions, WindowFunction, Content);
         }
-
     }
 }

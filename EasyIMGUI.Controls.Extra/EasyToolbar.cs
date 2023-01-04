@@ -15,5 +15,4 @@ namespace EasyIMGUI.Controls.Extra
             base.Draw();
         }
     }
-
 }

@@ -8,8 +8,13 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class Horizontal : NestedControl, ILayoutOptions, IContent
     {
+        /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+
+        /// <inheritdoc/>
         public GUIContent Content { get; set; } = new GUIContent("");
+
+        /// <inheritdoc/>
 
         public override void Draw()
         {

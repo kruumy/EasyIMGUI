@@ -10,6 +10,7 @@ namespace EasyIMGUI.Controls.Extra
     {
         public Action Prefix { get; set; } = null;
         public Action Postfix { get; set; } = null;
+
         public override void Draw()
         {
             Prefix?.Invoke();

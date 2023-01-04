@@ -7,7 +7,10 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class HorizontalScrollbar : Shared.Scrollbar, ILayoutOptions
     {
+        /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+
+        /// <inheritdoc/>
 
         public override void Draw()
         {

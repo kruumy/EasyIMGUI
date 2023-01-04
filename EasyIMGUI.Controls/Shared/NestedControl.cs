@@ -12,6 +12,7 @@ namespace EasyIMGUI.Controls.Shared
         /// Each <see cref="Control"/>'s <see cref="Control.Draw"/> method in invoked in <see cref="Draw"/>
         /// </summary>
         public List<Control> Controls { get; } = new List<Control>();
+
         /// <summary>
         /// Invokes each <see cref="Controls"/>'s <see cref="Control.Draw"/> method.
         /// If inherinting, wrap your underlying <see cref="UnityEngine.GUILayout"/> funtionality around <see cref="Draw"/>

@@ -8,7 +8,10 @@ namespace EasyIMGUI.Controls.Automatic
     /// </summary>
     public class SelectionGrid : Shared.SelectionGrid, ILayoutOptions
     {
+        /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
+
+        /// <inheritdoc/>
         public override void Draw()
         {
             Value = GUILayout.SelectionGrid(Value, Contents.ToArray(), Width, LayoutOptions);

@@ -6,6 +6,7 @@ namespace EasyIMGUI.Controls.Fixed
     public class Skin : NestedControl
     {
         public GUISkin GUISkin { get; set; } = new GUISkin();
+
         public override void Draw()
         {
             GUI.skin = GUISkin;
