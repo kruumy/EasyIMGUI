@@ -2,11 +2,10 @@
 using EasyIMGUI.Controls.Shared.Interfaces;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls.Extra.Base
+namespace EasyIMGUI.Controls.Shared
 {
-    public class SelectorItem : IContent
+    public abstract class Toggle : ValueControl<bool>, IContent
     {
-        public Control Control { get; set; }
         public GUIContent Content { get; set; } = new GUIContent("");
     }
 }

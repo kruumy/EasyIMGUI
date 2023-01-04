@@ -1,5 +1,4 @@
-﻿
-using EasyIMGUI.Controls.Base;
+﻿using EasyIMGUI.Controls.Shared.Base;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ namespace EasyIMGUI.Controls.Extra.Base
     public class SelectorItems : List<SelectorItem>
     {
         public Control[] Controls
-        { 
+        {
             get
             {
                 Control[] result = new Control[base.Count];
