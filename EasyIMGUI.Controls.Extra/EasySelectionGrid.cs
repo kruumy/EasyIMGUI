@@ -10,7 +10,7 @@ namespace EasyIMGUI.Controls.Extra
 
         public override void Draw()
         {
-            GUILayout.SelectionGrid(Value, Items.Contents, Width, LayoutOptions);
+            Value = GUILayout.SelectionGrid(Value, Items.Contents, Width, LayoutOptions);
             base.Draw();
         }
     }

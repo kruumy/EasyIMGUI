@@ -11,7 +11,7 @@ namespace EasyIMGUI.Controls.Shared
         private T _Value = default;
         /// <summary>
         /// The value of a <see cref="ValueControl{T}"/>.
-        /// Represents different aspect of a <see cref="Control"/> depending on the inheriter.
+        /// Represents different property of a <see cref="Control"/> depending on the inheriter.
         /// </summary>
         public T Value
         {

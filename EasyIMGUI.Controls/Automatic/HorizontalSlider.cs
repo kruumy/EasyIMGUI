@@ -12,7 +12,7 @@ namespace EasyIMGUI.Controls.Automatic
 
         public override void Draw()
         {
-            GUILayout.HorizontalSlider(Value, Minimum, Maximum, LayoutOptions);
+            Value = GUILayout.HorizontalSlider(Value, Minimum, Maximum, LayoutOptions);
         }
     }
 }

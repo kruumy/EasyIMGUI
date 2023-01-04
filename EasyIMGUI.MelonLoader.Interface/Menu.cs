@@ -13,10 +13,12 @@ namespace EasyIMGUI.MelonLoader.Interface
         /// A <see cref="List{T}"/> of <see cref="EasyIMGUI.Controls"/> to <see cref="Draw"/>
         /// </summary>
         public List<Control> Controls { get; } = new List<Control>();
+
         /// <summary>
         /// Determines of the <see cref="Menu"/> is opened or not.
         /// </summary>
         public bool IsOpen { get; private set; } = false;
+
         /// <summary>
         /// Subscribes the <see cref="Draw"/> method to <see cref="MelonEvents.OnGUI"/>.
         /// </summary>
@@ -30,8 +32,9 @@ namespace EasyIMGUI.MelonLoader.Interface
             else
             {
                 // TODO: throw exeption here
-            }            
+            }
         }
+
         /// <summary>
         /// Unsubscribes the <see cref="Draw"/> method to <see cref="MelonEvents.OnGUI"/>.
         /// </summary>
@@ -47,6 +50,7 @@ namespace EasyIMGUI.MelonLoader.Interface
                 // TODO: throw exeption here
             }
         }
+
         /// <summary>
         /// Toggles between <see cref="Open"/> and <see cref="Close"/> on each invoke.
         /// </summary>
@@ -61,6 +65,7 @@ namespace EasyIMGUI.MelonLoader.Interface
                 Close();
             }
         }
+
         private void Draw()
         {
             Controls.ForEach(c => c.Draw());
