@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace EasyIMGUI.Controls.Fixed
 {
-    public class HorixontalSlider : Shared.Slider, IDimensions
+    public class HorizontalSlider : Shared.Slider, IDimensions
     {
         /// <inheritdoc/>
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);
