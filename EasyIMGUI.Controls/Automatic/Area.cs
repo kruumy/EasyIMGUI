@@ -1,5 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
-using EasyIMGUI.Controls.Shared.Interfaces;
+﻿using EasyIMGUI.Controls.Shared;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Automatic

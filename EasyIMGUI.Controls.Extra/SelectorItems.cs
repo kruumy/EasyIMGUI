@@ -1,8 +1,8 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
+﻿using EasyIMGUI.Controls.Shared;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls.Extra.Base
+namespace EasyIMGUI.Controls.Extra
 {
     public class SelectorItems : List<SelectorItem>
     {
@@ -10,7 +10,7 @@ namespace EasyIMGUI.Controls.Extra.Base
         {
             get
             {
-                Control[] result = new Control[base.Count];
+                Control[] result = new Control[Count];
                 for (int i = 0; i < result.Length; i++)
                 {
                     result[i] = base[i].Control;
@@ -22,7 +22,7 @@ namespace EasyIMGUI.Controls.Extra.Base
         {
             get
             {
-                GUIContent[] result = new GUIContent[base.Count];
+                GUIContent[] result = new GUIContent[Count];
                 for (int i = 0; i < result.Length; i++)
                 {
                     result[i] = base[i].Content;

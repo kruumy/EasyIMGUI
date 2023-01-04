@@ -1,8 +1,7 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
-using EasyIMGUI.Controls.Shared.Interfaces;
+﻿using EasyIMGUI.Controls.Shared;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls.Extra.Base
+namespace EasyIMGUI.Controls.Extra
 {
     public class SelectorItem : IContent
     {

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EasyIMGUI.Controls.Shared.Interfaces
+namespace EasyIMGUI.Controls.Shared
 {
     public interface IDimensions
     {

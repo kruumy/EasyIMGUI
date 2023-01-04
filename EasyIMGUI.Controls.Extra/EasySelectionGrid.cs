@@ -1,6 +1,4 @@
 ﻿using EasyIMGUI.Controls.Automatic;
-using EasyIMGUI.Controls.Extra.Base;
-using EasyIMGUI.Controls.Interfaces;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Extra

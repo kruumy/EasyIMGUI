@@ -1,5 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
-namespace EasyIMGUI.Controls.Shared
+﻿namespace EasyIMGUI.Controls.Shared
 {
     /// <summary>
     /// Represents the base of a text element.

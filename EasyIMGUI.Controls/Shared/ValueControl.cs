@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EasyIMGUI.Controls.Shared.Base
+namespace EasyIMGUI.Controls.Shared
 {
     /// <summary>
     /// Represents a <see cref="Control"/> that contains a <see cref="Value"/>.

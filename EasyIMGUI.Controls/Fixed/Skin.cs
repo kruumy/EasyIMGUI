@@ -1,7 +1,7 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
+﻿using EasyIMGUI.Controls.Shared;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls
+namespace EasyIMGUI.Controls.Fixed
 {
     public class Skin : NestedControl
     {

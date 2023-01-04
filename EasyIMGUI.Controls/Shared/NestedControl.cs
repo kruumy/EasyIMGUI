@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EasyIMGUI.Controls.Shared.Base
+namespace EasyIMGUI.Controls.Shared
 {
     /// <summary>
     /// Base class for a <see cref="Control"/> that contains other <see cref="EasyIMGUI.Controls"/>.

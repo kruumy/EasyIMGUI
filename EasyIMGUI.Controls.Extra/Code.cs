@@ -1,4 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
+﻿using EasyIMGUI.Controls.Shared;
 using System;
 
 namespace EasyIMGUI.Controls.Extra

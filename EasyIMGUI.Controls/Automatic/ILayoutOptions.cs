@@ -1,6 +1,4 @@
-﻿using EasyIMGUI.Controls.Automatic;
-
-namespace EasyIMGUI.Controls.Interfaces
+﻿namespace EasyIMGUI.Controls.Automatic
 {
     public interface ILayoutOptions
     {

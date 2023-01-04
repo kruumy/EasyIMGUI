@@ -1,5 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Shared

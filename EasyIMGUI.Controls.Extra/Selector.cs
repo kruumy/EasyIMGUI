@@ -1,6 +1,6 @@
-﻿using EasyIMGUI.Controls.Shared.Base;
+﻿using EasyIMGUI.Controls.Shared;
 
-namespace EasyIMGUI.Controls.Extra.Base
+namespace EasyIMGUI.Controls.Extra
 {
     public abstract class Selector : ValueControl<int>
     {
