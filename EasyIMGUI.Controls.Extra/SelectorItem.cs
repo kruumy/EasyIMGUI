@@ -5,7 +5,9 @@ namespace EasyIMGUI.Controls.Extra
 {
     public class SelectorItem : IContent
     {
-        public Control Control { get; set; }
+        /// <inheritdoc/>
         public GUIContent Content { get; set; } = new GUIContent("");
+
+        public Control Control { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace EasyIMGUI.Controls.Shared
 {
     /// <summary>
-    /// Represents the base of a Scrollbar.
+    /// A base <see cref="Control"/> that represents a scrollbar.
     /// </summary>
     public abstract class Scrollbar : Slider
     {

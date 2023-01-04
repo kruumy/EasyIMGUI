@@ -8,8 +8,8 @@ namespace EasyIMGUI.Controls.Extra
     /// </summary>
     public class Code : NestedControl
     {
-        public Action Prefix { get; set; } = null;
         public Action Postfix { get; set; } = null;
+        public Action Prefix { get; set; } = null;
 
         public override void Draw()
         {

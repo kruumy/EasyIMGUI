@@ -7,6 +7,7 @@ namespace EasyIMGUI.Controls.Fixed
     {
         public GUISkin GUISkin { get; set; } = new GUISkin();
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             GUI.skin = GUISkin;

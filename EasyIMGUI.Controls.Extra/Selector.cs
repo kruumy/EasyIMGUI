@@ -7,6 +7,7 @@ namespace EasyIMGUI.Controls.Extra
         public SelectorItems Items { get; set; } = new SelectorItems();
         public SelectorItem SelectedItem => Items[Value];
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             SelectedItem.Control.Draw();

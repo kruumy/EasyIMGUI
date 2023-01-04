@@ -20,22 +20,6 @@ namespace EasyIMGUI.MelonLoader.Interface
         public bool IsOpen { get; private set; } = false;
 
         /// <summary>
-        /// Subscribes the <see cref="Draw"/> method to <see cref="MelonEvents.OnGUI"/>.
-        /// </summary>
-        public void Open()
-        {
-            if (!IsOpen)
-            {
-                MelonEvents.OnGUI.Subscribe(Draw);
-                IsOpen = true;
-            }
-            else
-            {
-                // TODO: throw exeption here
-            }
-        }
-
-        /// <summary>
         /// Unsubscribes the <see cref="Draw"/> method to <see cref="MelonEvents.OnGUI"/>.
         /// </summary>
         public void Close()
@@ -44,6 +28,22 @@ namespace EasyIMGUI.MelonLoader.Interface
             {
                 MelonEvents.OnGUI.Unsubscribe(Draw);
                 IsOpen = false;
+            }
+            else
+            {
+                // TODO: throw exeption here
+            }
+        }
+
+        /// <summary>
+        /// Subscribes the <see cref="Draw"/> method to <see cref="MelonEvents.OnGUI"/>.
+        /// </summary>
+        public void Open()
+        {
+            if (!IsOpen)
+            {
+                MelonEvents.OnGUI.Subscribe(Draw);
+                IsOpen = true;
             }
             else
             {

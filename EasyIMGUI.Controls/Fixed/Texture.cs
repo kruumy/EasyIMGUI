@@ -5,12 +5,16 @@ namespace EasyIMGUI.Controls.Fixed
 {
     public class Texture : Control, IDimensions
     {
-        public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);
-        public UnityEngine.Texture Image { get; set; }
-        public ScaleMode ScaleMode { get; set; } = ScaleMode.StretchToFill;
         public bool AlphaBlend { get; set; } = false;
-        public float ImageAspect { get; set; } = 0f;
 
+        /// <inheritdoc/>
+        public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);
+
+        public UnityEngine.Texture Image { get; set; }
+        public float ImageAspect { get; set; } = 0f;
+        public ScaleMode ScaleMode { get; set; } = ScaleMode.StretchToFill;
+
+        /// <inheritdoc/>
         public override void Draw()
         {
             GUI.DrawTexture(Dimensions, Image, ScaleMode, AlphaBlend, ImageAspect);

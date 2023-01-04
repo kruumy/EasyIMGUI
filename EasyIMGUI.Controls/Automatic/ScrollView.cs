@@ -12,7 +12,6 @@ namespace EasyIMGUI.Controls.Automatic
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         /// <inheritdoc/>
-
         public override void Draw()
         {
             Position = GUILayout.BeginScrollView(Position, AlwaysShowHorizontal, AlwaysShowVertical, LayoutOptions);

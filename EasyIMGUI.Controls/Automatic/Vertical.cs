@@ -15,7 +15,6 @@ namespace EasyIMGUI.Controls.Automatic
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         /// <inheritdoc/>
-
         public override void Draw()
         {
             GUILayout.BeginVertical(Content, GUIStyle.none, LayoutOptions);

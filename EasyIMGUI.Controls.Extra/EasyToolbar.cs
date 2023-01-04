@@ -5,10 +5,10 @@ namespace EasyIMGUI.Controls.Extra
 {
     public class EasyToolbar : Selector, ILayoutOptions
     {
-        public GUIStyle Style { get; set; } = null;
-
+        /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             Value = GUILayout.Toolbar(Value, Items.Contents, LayoutOptions);

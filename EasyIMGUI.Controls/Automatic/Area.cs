@@ -15,8 +15,6 @@ namespace EasyIMGUI.Controls.Automatic
         public Rect Dimensions { get; set; } = new Rect(Screen.width / 2, Screen.height / 2, 300, 300);
 
         /// <inheritdoc/>
-        /// <inheritdoc/>
-
         public override void Draw()
         {
             GUILayout.BeginArea(Dimensions, Content);

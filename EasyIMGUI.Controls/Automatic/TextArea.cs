@@ -9,7 +9,6 @@ namespace EasyIMGUI.Controls.Automatic
     public class TextArea : Shared.TextControl, ILayoutOptions
     {
         /// <inheritdoc/>
-
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
         /// <inheritdoc/>

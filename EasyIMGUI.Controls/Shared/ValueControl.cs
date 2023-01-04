@@ -10,6 +10,22 @@ namespace EasyIMGUI.Controls.Shared
     {
         private T _Value = default;
 
+        private Func<T> BindingValueGetter;
+
+        private Action<T> BindingValueSetter;
+
+        /// <summary>
+        /// Is invoked everytime <see cref="Value"/> has been changed.
+        /// The value it has been changed to is passed through the event args.
+        /// <see cref="OnValueChanged"/> is still invoked even if the <see cref="Value"/> has been bounded.
+        /// </summary>
+        public event EventHandler<T> OnValueChanged;
+
+        /// <summary>
+        /// Determines if <see cref="Value"/> has been bounded to a Getter and Setter.
+        /// </summary>
+        public bool IsValueBinded => BindingValueSetter != null && BindingValueGetter != null;
+
         /// <summary>
         /// The value of a <see cref="ValueControl{T}"/>.
         /// Represents different property of a <see cref="Control"/> depending on the inheriter.
@@ -33,26 +49,11 @@ namespace EasyIMGUI.Controls.Shared
         }
 
         /// <summary>
-        /// Is invoked everytime <see cref="Value"/> has been changed.
-        /// The value it has been changed to is passed through the event args.
-        /// <see cref="OnValueChanged"/> is still invoked even if the <see cref="Value"/> has been bounded.
-        /// </summary>
-        public event EventHandler<T> OnValueChanged;
-
-        /// <summary>
-        /// Determines if <see cref="Value"/> has been bounded to a Getter and Setter.
-        /// </summary>
-        public bool IsValueBinded => BindingValueSetter != null && BindingValueGetter != null;
-
-        private Func<T> BindingValueGetter;
-        private Action<T> BindingValueSetter;
-
-        /// <summary>
         /// Is used to bind a property or field to the <see cref="Value"/>.
         /// </summary>
         /// <param name="getter">The getter for <see cref="Value"/> to use.
-        /// <code>x => MyProperty</code> or
-        /// <code>x => Person.GetName()</code>
+        /// <code>() => MyProperty</code> or
+        /// <code>() => Person.GetName()</code>
         /// are common use cases.
         /// </param>
         /// <param name="setter">The getter for <see cref="Value"/> to use.

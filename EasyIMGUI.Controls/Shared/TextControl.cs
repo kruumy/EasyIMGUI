@@ -1,7 +1,7 @@
 ﻿namespace EasyIMGUI.Controls.Shared
 {
     /// <summary>
-    /// Represents the base of a text element.
+    /// A base <see cref="Control"/> that represents a text control.
     /// </summary>
     public abstract class TextControl : ValueControl<string>
     {

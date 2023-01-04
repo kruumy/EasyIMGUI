@@ -6,6 +6,19 @@ namespace EasyIMGUI.Controls.Extra
 {
     public class SelectorItems : List<SelectorItem>
     {
+        public GUIContent[] Contents
+        {
+            get
+            {
+                GUIContent[] result = new GUIContent[Count];
+                for (int i = 0; i < result.Length; i++)
+                {
+                    result[i] = base[i].Content;
+                }
+                return result;
+            }
+        }
+
         public Control[] Controls
         {
             get
@@ -19,17 +32,14 @@ namespace EasyIMGUI.Controls.Extra
             }
         }
 
-        public GUIContent[] Contents
+        public static implicit operator Control[](SelectorItems si)
         {
-            get
-            {
-                GUIContent[] result = new GUIContent[Count];
-                for (int i = 0; i < result.Length; i++)
-                {
-                    result[i] = base[i].Content;
-                }
-                return result;
-            }
+            return si.Controls;
+        }
+
+        public static implicit operator GUIContent[](SelectorItems si)
+        {
+            return si.Contents;
         }
     }
 }

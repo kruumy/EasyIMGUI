@@ -9,16 +9,16 @@ namespace EasyIMGUI.Controls.Shared
     /// </summary>
     public abstract class Button : Control, IContent
     {
-        /// <inheritdoc/>
-        public GUIContent Content { get; set; } = new GUIContent("");
-
         /// <summary>
         /// Invoked on every button press.
         /// </summary>
         public event EventHandler OnButtonPressed;
 
+        /// <inheritdoc/>
+        public GUIContent Content { get; set; } = new GUIContent("");
+
         /// <summary>
-        /// Invoked <see cref="Invoke_OnButtonPressed"/> to invoke <see cref="OnButtonPressed"/>.
+        /// To invoke <see cref="OnButtonPressed"/>.
         /// </summary>
         protected void Invoke_OnButtonPressed()
         {

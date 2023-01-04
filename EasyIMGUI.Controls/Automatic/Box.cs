@@ -9,10 +9,9 @@ namespace EasyIMGUI.Controls.Automatic
     public class Box : Shared.Box, ILayoutOptions
     {
         /// <inheritdoc/>
-
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
-        /// <inheritdoc/>
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             GUILayout.Box(Content, LayoutOptions);

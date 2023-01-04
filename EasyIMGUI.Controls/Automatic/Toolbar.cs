@@ -9,10 +9,9 @@ namespace EasyIMGUI.Controls.Automatic
     public class Toolbar : Shared.Toolbar, ILayoutOptions
     {
         /// <inheritdoc/>
-
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
-        /// <inheritdoc/>
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             Value = GUILayout.Toolbar(Value, Contents.ToArray(), LayoutOptions);

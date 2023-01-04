@@ -9,10 +9,9 @@ namespace EasyIMGUI.Controls.Automatic
     public class VerticalSlider : Shared.Slider, ILayoutOptions
     {
         /// <inheritdoc/>
-
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
-        /// <inheritdoc/>
 
+        /// <inheritdoc/>
         public override void Draw()
         {
             Value = GUILayout.VerticalSlider(Value, Maximum, Minimum, LayoutOptions);
