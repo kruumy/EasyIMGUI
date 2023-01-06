@@ -1,5 +1,6 @@
 ﻿using EasyIMGUI.Controls.Shared;
 using MelonLoader;
+using System;
 using System.Collections.Generic;
 
 namespace EasyIMGUI.MelonLoader.Interface
@@ -9,6 +10,16 @@ namespace EasyIMGUI.MelonLoader.Interface
     /// </summary>
     public class Menu
     {
+        /// <summary>
+        /// Invoked on Close()
+        /// </summary>
+        public event EventHandler OnClosed;
+
+        /// <summary>
+        /// Invoked on Open()
+        /// </summary>
+        public event EventHandler OnOpen;
+
         /// <summary>
         /// A <see cref="List{T}"/> of <see cref="EasyIMGUI.Controls"/> to <see cref="Draw"/>
         /// </summary>
@@ -28,6 +39,7 @@ namespace EasyIMGUI.MelonLoader.Interface
             {
                 MelonEvents.OnGUI.Unsubscribe(Draw);
                 IsOpen = false;
+                OnClosed?.Invoke(this, EventArgs.Empty);
             }
             else
             {
@@ -44,6 +56,7 @@ namespace EasyIMGUI.MelonLoader.Interface
             {
                 MelonEvents.OnGUI.Subscribe(Draw);
                 IsOpen = true;
+                OnOpen?.Invoke(this, EventArgs.Empty);
             }
             else
             {
