@@ -1,7 +1,7 @@
 ﻿using EasyIMGUI.Controls.Shared;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls.Fixed
+namespace EasyIMGUI.Controls.Styling
 {
     public class Color : NestedControl
     {
