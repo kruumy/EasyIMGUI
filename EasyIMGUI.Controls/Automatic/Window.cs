@@ -11,10 +11,16 @@ namespace EasyIMGUI.Controls.Automatic
         /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
+        public bool AutoResizeHeight { get; set; } = true;
+
         /// <inheritdoc/>
         public override void Draw()
         {
             Dimensions = GUILayout.Window(ID, Dimensions, WindowFunction, Content, LayoutOptions);
+            if (AutoResizeHeight)
+            {
+                Dimensions = new Rect(Dimensions.x, Dimensions.y, Dimensions.width, 0);
+            }
         }
     }
 }
