@@ -11,7 +11,7 @@ namespace EasyIMGUI.Controls.Automatic
         /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();
 
-        public bool AutoResizeHeight { get; set; } = true;
+        public bool AutoResizeHeight { get; set; } = false;
 
         /// <inheritdoc/>
         public override void Draw()
