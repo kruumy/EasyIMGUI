@@ -1,4 +1,4 @@
-﻿namespace EasyIMGUI.Controls.Shared
+﻿namespace EasyIMGUI.Controls.Base
 {
     /// <summary>
     /// The absolute base class for a gui control.

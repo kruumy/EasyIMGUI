@@ -1,4 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared;
+﻿using EasyIMGUI.Controls.Base;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Automatic
@@ -6,7 +6,7 @@ namespace EasyIMGUI.Controls.Automatic
     /// <summary>
     /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Window(int, Rect, GUI.WindowFunction, GUIContent, GUIStyle, GUILayoutOption[])"/>.
     /// </summary>
-    public class Window : Shared.Window, ILayoutOptions
+    public class Window : Base.Window, ILayoutOptions
     {
         /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();

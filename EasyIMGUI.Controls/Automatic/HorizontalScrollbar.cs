@@ -5,7 +5,7 @@ namespace EasyIMGUI.Controls.Automatic
     /// <summary>
     /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.HorizontalScrollbar(float, float, float, float, GUILayoutOption[])"/>.
     /// </summary>
-    public class HorizontalScrollbar : Shared.Scrollbar, ILayoutOptions
+    public class HorizontalScrollbar : Base.Scrollbar, ILayoutOptions
     {
         /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();

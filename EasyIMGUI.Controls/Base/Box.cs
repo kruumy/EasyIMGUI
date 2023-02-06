@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-namespace EasyIMGUI.Controls.Shared
+namespace EasyIMGUI.Controls.Base
 {
     /// <summary>
-    /// A base <see cref="Control"/> that represents a toggle.
+    /// A base <see cref="Control"/> that represents a box.
     /// </summary>
-    public abstract class Toggle : ValueControl<bool>, IContent
+    public abstract class Box : Control, IContent
     {
         /// <inheritdoc/>
         public GUIContent Content { get; set; } = new GUIContent("");

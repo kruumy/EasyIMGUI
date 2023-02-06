@@ -1,9 +1,9 @@
-﻿using EasyIMGUI.Controls.Shared;
+﻿using EasyIMGUI.Controls.Base;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Fixed
 {
-    public class SingleButton : Shared.Button, IDimensions
+    public class SingleButton : Base.Button, IDimensions
     {
         /// <inheritdoc/>
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);

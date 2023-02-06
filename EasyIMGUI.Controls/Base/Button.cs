@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace EasyIMGUI.Controls.Shared
+namespace EasyIMGUI.Controls.Base
 {
     /// <summary>
     /// Base class for a button. Defines OnButtonPressed.

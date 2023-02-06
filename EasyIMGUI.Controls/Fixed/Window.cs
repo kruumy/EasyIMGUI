@@ -2,7 +2,7 @@
 
 namespace EasyIMGUI.Controls.Fixed
 {
-    public class Window : Shared.Window
+    public class Window : Base.Window
     {
         /// <inheritdoc/>
         public override void Draw()

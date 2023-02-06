@@ -1,9 +1,9 @@
-﻿using EasyIMGUI.Controls.Shared;
+﻿using EasyIMGUI.Controls.Base;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Fixed
 {
-    public class Label : Shared.Label, IDimensions
+    public class Label : Base.Label, IDimensions
     {
         /// <inheritdoc/>
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);

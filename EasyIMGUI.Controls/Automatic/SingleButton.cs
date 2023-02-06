@@ -1,4 +1,4 @@
-﻿using EasyIMGUI.Controls.Shared;
+﻿using EasyIMGUI.Controls.Base;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Automatic
@@ -6,7 +6,7 @@ namespace EasyIMGUI.Controls.Automatic
     /// <summary>
     /// A <see cref="Control"/> containing the implementation of <see cref="GUILayout.Button(string, GUIStyle, GUILayoutOption[])"/>.
     /// </summary>
-    public class SingleButton : Shared.Button, ILayoutOptions
+    public class SingleButton : Base.Button, ILayoutOptions
     {
         /// <inheritdoc/>
         public LayoutOptions LayoutOptions { get; set; } = new LayoutOptions();

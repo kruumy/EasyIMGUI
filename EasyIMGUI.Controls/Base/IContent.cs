@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EasyIMGUI.Controls.Shared
+namespace EasyIMGUI.Controls.Base
 {
     /// <summary>
     /// An interface for implementing a common <see cref="GUIContent"/>.

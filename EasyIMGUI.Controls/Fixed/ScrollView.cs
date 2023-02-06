@@ -1,9 +1,9 @@
-﻿using EasyIMGUI.Controls.Shared;
+﻿using EasyIMGUI.Controls.Base;
 using UnityEngine;
 
 namespace EasyIMGUI.Controls.Fixed
 {
-    public class ScrollView : Shared.ScrollView, IDimensions
+    public class ScrollView : Base.ScrollView, IDimensions
     {
         /// <inheritdoc/>
         public Rect Dimensions { get; set; } = new Rect(0, 0, 0, 0);

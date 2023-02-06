@@ -1,4 +1,4 @@
-﻿namespace EasyIMGUI.Controls.Shared
+﻿namespace EasyIMGUI.Controls.Base
 {
     /// <summary>
     /// A base <see cref="Control"/> that represents a password field.
