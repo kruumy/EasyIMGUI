@@ -69,7 +69,7 @@ namespace EasyIMGUI.MelonLoader.Interface
         /// </summary>
         public void Toggle()
         {
-            if (IsOpen)
+            if (!IsOpen)
             {
                 Open();
             }
