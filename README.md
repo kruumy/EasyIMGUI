@@ -100,3 +100,6 @@ WIP
 ```
 WIP
 ```
+
+## Known Issues
+* The Controls.Base.Window control might not work on some il2cpp games due to UnityEngine.GUI.WindowFunction being defined differently. I will update a fix soon.
